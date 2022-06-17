@@ -1,41 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.App {
-  text-align: center;
+.v-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  position: absolute;
+  left: 295px;
+  padding: 11px;
+  background-color: #54e6af;
+  border-radius: 999px;
+  bottom: 6.38rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn:hover {
+  background-color: #b3ffe2;
+}
+.red {
+  color: red;
+  font-size: 12px;
+  margin-left: 20px;
+}
+.card {
+  background-image: url(/src/assets/mobile/image-host.jpg);
+}
+@media (min-width: 768px) {
+  .card {
+    background-image: url(/src/assets/tablet/image-host.jpg);
+    /* background-position: 200px 80px; */
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 1280px) {
+  .card {
+    background-image: url(/src/assets/desktop/image-host.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-card {
+  background-color: #121725;
 }
