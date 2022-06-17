@@ -9,11 +9,11 @@ import "./App.css"
 
 function App() {
   const [input, setInput] = useState("")
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(true)
   return (
     <div className=''>
       <div className=' xl:w-[79.688rem] md:w-[48rem] w-[23.438rem] card h-[40rem] '>
-        <img src={logo} alt='logo' className='mb-[100px]'></img>
+        <img src={logo} alt='logo' className='mb-[100px] xl:mt-0 md:mt-5'></img>
         <div className='xl:w-[45.188rem] xl:h-[31.813rem] pt-[4.5rem] md:w-[39.688rem] w-[20.438rem] bg-card absolute bottom-[5.625rem] items-end'>
           <h1 className='xl:text-[3.25rem] md:text-[3rem] text-[1.625rem] font-light text-[#54E6AF] leading-1 mb-5'>
             PUBLISH YOUR PODCASTS <span className='text-white'>EVERYWHERE</span>
@@ -32,20 +32,20 @@ function App() {
             <button
               className='btn font-bold text-[14px]'
               onClick={(e) => {
-                e.preventDefault()
                 setIsClicked(!isClicked)
+                e.preventDefault()
               }}
             >
               Request access
             </button>
-            {input.indexOf("@") ? (
-              <></>
-            ) : (
-              <>
-                <br />
-                <span className='red'>Oops! Please check your email</span>
-              </>
-            )}
+            {isClicked
+              ? input.includes("@") && <></>
+              : !input.includes("@") && (
+                  <>
+                    <br />
+                    <span className='red'>Oops! Please check your email</span>
+                  </>
+                )}
           </form>
           <div className='xl:w-[33.438rem] flex justify-between p-3'>
             <img src={spotify} alt='spotify'></img>

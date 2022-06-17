@@ -6,5 +6,9 @@ body {
   justify-content: flex-end;
   align-items: center;
   font-family: "Chivo", sans-serif;
-  height: 100vh;
+}
+@media (min-width: 1268px) {
+  body {
+    height: 100vh;
+  }
 }

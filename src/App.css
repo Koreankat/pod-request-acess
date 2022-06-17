@@ -31,8 +31,9 @@
 @media (min-width: 768px) {
   .card {
     background-image: url(/src/assets/tablet/image-host.jpg);
-    /* background-position: 200px 80px; */
+    background-position: right;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 @media (min-width: 1280px) {
